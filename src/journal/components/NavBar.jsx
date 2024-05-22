@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 import {startLogout} from '../../store/auth';
 
 export const NavBar = ({drawerWidth}) => {
-    const dispatch = useDispatch(state => state.auth);
+    const dispatch = useDispatch();
 
     const onLogout = () => {
         dispatch(startLogout());

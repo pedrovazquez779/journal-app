@@ -9,6 +9,11 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
         createValidators();
     }, [formState]);
 
+    // Added because it is required when changing between notes
+    useEffect(() => {
+        setFormState(initialForm);
+    }, [initialForm]);
+
     const onInputChange = ({target}) => {
         const {name, value} = target;
         setFormState({
