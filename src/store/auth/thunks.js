@@ -7,7 +7,7 @@ import {
 } from '../../firebase/providers';
 import {clearNotesLogout} from '../journal';
 
-export const checkingAuthentication = (email, password) => {
+export const checkingAuthentication = () => {
     return async (dispatch) => {
         dispatch(checkingCredentials());
     };
